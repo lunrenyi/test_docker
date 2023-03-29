@@ -19,7 +19,6 @@ jobs:
     - name: Build the Docker image
       run: |
         echo "hello word!"
-        pwd
         echo cat hello.py
         ls -l
         # 定义镜像名称
