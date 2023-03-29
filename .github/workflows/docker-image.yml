@@ -16,5 +16,6 @@ jobs:
     - name: Build the Docker image
       run: |
         echo "hello word!"
+        pwd
         ls -l
         
