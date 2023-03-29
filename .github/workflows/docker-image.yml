@@ -16,9 +16,8 @@ jobs:
     - name: Build the Docker image
       run: |
         echo "hello word!"
-        ls -l
         cd ..
-        ls -l
+        cat hello.py
         cd ..
         ls -l
         
