@@ -13,9 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: test_docker
-      uses: lunrenyi/test_docker@test
-      
     - name: Build the Docker image
       run: |
         echo "hello word!"
