@@ -15,4 +15,4 @@ jobs:
     steps:
     - name: Build the Docker image
       run: |
-        bash test_docker/test_bash.sh
+        bash lunrenyi/test_docker/test_bash.sh
