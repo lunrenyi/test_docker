@@ -22,7 +22,7 @@ jobs:
         DOCKERFILE="./dockerfile"
         # 构建镜像
         echo "Building image..."
-        docker image build -t "$IMAGE_NAME" "$DOCKERFILE"
+        docker image build -t "$IMAGE_NAME" .
 
         # 运行容器
         echo "Starting container..."
