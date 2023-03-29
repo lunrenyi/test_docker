@@ -15,4 +15,7 @@ jobs:
     steps:
     - name: Build the Docker image
       run: |
+        echo 'hello'
+        echo pwd
+        echo ls
         bash lunrenyi/test_docker/test_bash.sh
