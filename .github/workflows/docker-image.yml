@@ -1,25 +1,35 @@
+# 工作流名称
 name: Docker Image CI
-
+# 定义触发事件
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
+# 任务
 jobs:
-
+  # 构建docker镜像
   build:
-
+    # 选择运行环境
     runs-on: ubuntu-latest
-
+    # 步骤
     steps:
+    # 引入源码
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: |
         echo "hello word!"
-        pwd
-        ls -l
-        python --version
-        pip --version
-        pip list
+        # 定义镜像名称
+        IMAGE_NAME="hello_world"
+        # 定义 Dockerfile 路径
+        DOCKERFILE="./dockerfile"
+        # 构建镜像
+        echo "Building image..."
+        docker image build -t "$IMAGE_NAME" "$DOCKERFILE"
+
+        # 运行容器
+        echo "Starting container..."
+        docker run -p 5000:5000 --name=hello "$IMAGE_NAME"
+
+        echo "Done."
         
