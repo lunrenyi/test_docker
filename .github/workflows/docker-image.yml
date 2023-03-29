@@ -13,10 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: lunrenyi/test_docker@main
     - name: Build the Docker image
       run: |
         echo "hello word!"
         pwd
         ls -l
+        python --version
+        pip --version
+        pip list
         
